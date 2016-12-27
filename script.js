@@ -141,6 +141,29 @@ window.onload = function() {
     }
     insertionSortAlgorithm();
     
+//Insertion Sort
+(function() {
+    var arrNumbers = [10, 2, 30, 4, 12, 25, 55, 100, 2, 3, 4, 5, 1, 2, 0];
+
+    function insertionSort(arr) {
+        var key,
+            pre;
+        for (var i = 1; i < arr.length; i++) {
+            key = arr[i];
+            pre = i - 1;
+            while( pre > -1 && arr[pre] > key) {
+                arr[pre + 1] = arr[pre];
+                pre = pre - 1;
+                arr[pre + 1] = key;
+            }
+        }
+
+        return arr;
+    }
+    console.log("Insertion Sort: ")
+    console.log(insertionSort(arrNumbers));
+ })();
+    
     
     
     
